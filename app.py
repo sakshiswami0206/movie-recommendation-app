@@ -2,19 +2,15 @@ import streamlit as st
 import pickle
 import pandas as pd
 import requests
-
 import os
 import gdown
 
 file_path = "similarity.pkl"
 if not os.path.exists(file_path):
     # Replace the URL below with your own shared link
-    url = "https://drive.google.com/file/d/1A5Hlx-kzQcPyVejmy113KATkHGMJrcV9/view?usp=sharing"
-    gdown.download(url, file_path, quiet=False)
+    simi = "https://drive.google.com/uc?id=1A5Hlx-kzQcPyVejmy113KATkHGMJrcV9"
+    gdown.download(simi, file_path, quiet=False)
 
-# Then load it as usual
-import pickle
-similarity = pickle.load(open(file_path, 'rb'))
 
 
 # def fetch_poster(movie_id):
